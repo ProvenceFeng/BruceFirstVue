@@ -1,0 +1,39 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "parser": "babel-eslint",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "html"
+  ],
+  "extends": [
+    "plugin:vue/essential",
+    "plugin:vue/base",
+    "standard",
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:vue/recommended"
+  ],
+  "rules": {
+    "generator-star-spacing": "off",
+    "no-debugger": "error",
+    "semi": [
+      "error",
+      "always"
+    ],
+    "eqeqeq": 0,
+    "spaced-comment": 0,
+    "keyword-spacing": 0,
+    "space-before-function-paren": 0,
+    "quotes": [
+      0,
+      "single"
+    ],
+    "vue/no-unused-vars": "error",
+    "vue/no-parsing-error": 2
+  }
+}

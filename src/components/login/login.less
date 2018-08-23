@@ -1,0 +1,76 @@
+.login-area {
+  width: 100vw;
+  height: 100vh;
+  .flex-h-center-v-center;
+  .login {
+    .flex;
+    min-height: 433px;
+    min-width: 710px;
+    border: @border-gray;
+    >div {
+      width: 50%;
+    }
+    .left-panel {
+      background: #0cc0cc
+    }
+    .right-panel {
+      padding: 57px 50px 0 50px;
+      .content {
+        .title {
+          margin: 0 0 10px 0;
+        }
+        .info {
+          color: #cccccc;
+          font-size: 12px;
+          margin: 10px 0 20px 0;
+        }
+        .account,
+        .password {
+          input {
+            width: 100%;
+            margin: 0 0 5px 0;
+            &:focus+hr {
+              border-color: #0d94ff;
+            }
+          }
+          hr {
+            border-color: #cccccc;
+          }
+        }
+        .account,
+        .password {
+          margin: 20px 0 30px 0;
+        }
+        .password {
+          margin: 0 0 15px 0;
+        }
+        .setting-area {
+          margin: 0 0 25px 0;
+          .flex-v-center-h-space-between;
+          font-size: 11px;
+          .remeber {
+            color: #cccccc;
+            cursor: pointer;
+          }
+          .forget {
+            color: #dddddd
+          }
+        }
+        .btn-area {
+          .flex-reverse;
+          .btn {
+            cursor: pointer;
+            .flex-h-center-v-center;
+            height: 36px;
+            font-size: 16px;
+            border-radius: 18px;
+            width: 90px;
+            font-weight: 500;
+            color: #ffffff;
+            background: rgb(130, 212, 65);
+          }
+        }
+      }
+    }
+  }
+}
