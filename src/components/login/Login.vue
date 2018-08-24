@@ -15,8 +15,8 @@
             <hr/>
           </div>
           <div class="setting-area">
-            <div class="remeber">
-              <input type="checkbox" />
+            <div class="remeber" @click="toggleRememberMe">
+              <div class="check-box" :class="{checked:isRememberMe}"></div>
               <span>Remember me</span>
             </div>
             <div class="forget">Forgot password?</div>
@@ -30,8 +30,23 @@
   </div>
 </template>
 <script>
+import {mapState,mapActions} from 'vuex';
+import {actionTypes} from '../../store/login.js'
 export default {
+  computed: mapState({
+    // 箭头函数可使代码更简练
+    isRememberMe: state => state.login.isRememberMe,
+
+    // 传字符串参数 'count' 等同于 `state => state.count`
+    countAlias: 'count',
+
+    // 为了能够使用 `this` 获取局部状态，必须使用常规函数
+    countPlusLocalState (state) {
+      return state.count + this.localCount
+    }
+  }),
   methods: {
+    ...mapActions({toggleRememberMe:actionTypes.toggleRememberMe}),
     login: function() {
       location.hash = "#/main";
     }

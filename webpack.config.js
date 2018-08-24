@@ -24,17 +24,17 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015']
+          presets: ['es2015', "stage-0"]
         }
       }, {
         test: /\.(css|less)$/,
-        loader: ExtractTextPlugin.extract("css-loader!less-loader","style")
+        loader: ExtractTextPlugin.extract("css-loader!less-loader", "style")
       }, {
         test: /\.(eot|woff|svg|ttf|woff2|gif)(\?|$)/,
         loader: 'file-loader?name=[hash].[ext]'

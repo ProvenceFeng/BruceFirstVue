@@ -51,9 +51,20 @@
           .remeber {
             color: #cccccc;
             cursor: pointer;
+            .flex;
+            .check-box{
+              width: 16px;
+              height: 16px;
+              margin: 0 5px 0 0;
+              border: @border-gray;
+              &.checked{
+                background: #00cc0c
+              }
+            }
           }
           .forget {
-            color: #dddddd
+            color: #dddddd;
+            cursor: pointer;
           }
         }
         .btn-area {
